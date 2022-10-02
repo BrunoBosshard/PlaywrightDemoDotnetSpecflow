@@ -27,7 +27,7 @@ Scenario Outline: Airport Code Look Up
 	Examples:
 	| airportCode | airportName |
 	| ATL | Atlanta |
-	| LAX | Los Angeles |
-	| ORD | Chicago |
 	| DFW | Dallas |
 	| DEN | Denver |
+	| LAX | Los Angeles |
+	| SFO | San Francisco |
