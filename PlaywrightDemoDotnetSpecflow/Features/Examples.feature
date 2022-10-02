@@ -1,0 +1,33 @@
+﻿Feature: Examples
+
+Playwright Behaviour-Driven Development (BDD) examples
+
+@smoke
+Scenario: Get Started with Playwright
+	Given I navigate to the Playwright home page
+	When I click on the GET STARTED button
+	Then I expect the URL to contain intro
+
+@regression
+Scenario: Look Up a US ZIP Code
+	Given I navigate to the USPS Look Up a ZIP Code page
+	And I enter City and State
+	| City | State |
+	| Beverly Hills | CA |
+	And I click the the Find button
+	Then I sould get a page containing the selector BEVERLY HILLS CA 90210
+
+@regression
+Scenario Outline: Airport Code Look Up
+	Given I navigate to the Bing search home page
+	When I enter iata:"<airportCode>" as search term
+	And I click on the search the web button
+	Then I should get a page cotaining the term "<airportName>"
+
+	Examples:
+	| airportCode | airportName |
+	| ATL | Atlanta |
+	| LAX | Los Angeles |
+	| ORD | Chicago |
+	| DFW | Dallas |
+	| DEN | Denver |
