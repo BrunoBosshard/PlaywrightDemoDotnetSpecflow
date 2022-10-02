@@ -33,20 +33,10 @@ jobs:
         run: dotnet build
       - name: Playwright install
         run: pwsh ./bin/Debug/net6.0/playwright.ps1 install --with-deps
-      # Include the argument "-s <filename>" to use a ".runsettings" file
-      - name: Run tests
-        run: dotnet test -e BROWSER=chromium --logger trx --logger html --results-directory "TestResults-6.0.x"
       - name: Create report folder
         run: mkdir -m777 ../public
-      - name: Copy html report file
-        run: cp TestResults-6.0.x/TestResult*.html ../public/index.html
-      # results include videos
-      - name: Upload playwright results
-        uses: actions/upload-artifact@v3
-        with:
-          name: playwright-report
-          path: playwright-demo-dotnet/TestResults-6.0.x
-          if-no-files-found: ignore
+      - name: Run tests
+        run: dotnet test --logger trx --logger html --results-directory "../public"
       - name: Deploy playwright report
         uses: peaceiris/actions-gh-pages@v3
         with:
