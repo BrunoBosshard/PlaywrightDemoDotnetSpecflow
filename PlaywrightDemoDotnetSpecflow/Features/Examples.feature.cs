@@ -150,10 +150,10 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Airport Code Look Up")]
         [NUnit.Framework.CategoryAttribute("regression")]
         [NUnit.Framework.TestCaseAttribute("ATL", "Atlanta", null)]
-        [NUnit.Framework.TestCaseAttribute("LAX", "Los Angeles", null)]
-        [NUnit.Framework.TestCaseAttribute("ORD", "Chicago", null)]
         [NUnit.Framework.TestCaseAttribute("DFW", "Dallas", null)]
         [NUnit.Framework.TestCaseAttribute("DEN", "Denver", null)]
+        [NUnit.Framework.TestCaseAttribute("LAX", "Los Angeles", null)]
+        [NUnit.Framework.TestCaseAttribute("SFO", "San Francisco", null)]
         public void AirportCodeLookUp(string airportCode, string airportName, string[] exampleTags)
         {
             string[] @__tags = new string[] {
