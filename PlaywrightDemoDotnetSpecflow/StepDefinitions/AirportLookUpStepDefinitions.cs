@@ -9,7 +9,6 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
     {
         private readonly Driver _driver;
         private readonly IPage _page;
-        private readonly ILocator _acceptCookiesButton;
         private readonly ILocator _searchInput;
         private readonly ILocator _searchButton;
 
@@ -17,7 +16,6 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         {
             _driver = driver;
             _page = _driver.Page;
-            _acceptCookiesButton = _page.Locator("id=bnp_btn_accept");
             _searchInput = _page.Locator("input[name=\"q\"]");
             _searchButton = _page.Locator("id=search_icon");
         }
@@ -26,7 +24,6 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         public async Task GivenIAmOnTheBingSearchHomePage()
         {
             await _page.GotoAsync("https://www.bing.com");
-            await _acceptCookiesButton.ClickAsync();
         }
 
         [When(@"I enter iata:""([^""]*)"" as search term")]
