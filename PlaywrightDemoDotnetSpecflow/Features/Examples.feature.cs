@@ -137,7 +137,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I enter City and State", ((string)(null)), table1, "And ");
 #line hidden
 #line 17
- testRunner.And("I click the the Find button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click the Find button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
  testRunner.Then("I sould get a page containing the selector BEVERLY HILLS CA 90210", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

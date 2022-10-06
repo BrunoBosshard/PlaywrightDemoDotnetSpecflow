@@ -29,15 +29,15 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         }
 
         [Given(@"I enter City and State")]
-        public async Task GivenIEnterTheFollowingCityAndState(Table table)
+        public async Task GivenIEnterCityAndState(Table table)
         {
             dynamic data = table.CreateDynamicInstance();
             await _cityInput.FillAsync((string)data.City);
             await _stateSelect.SelectOptionAsync((string)data.State);
         }
 
-        [Given(@"I click the the Find button")]
-        public async Task GivenIClickTheTheFindButton()
+        [Given(@"I click the Find button")]
+        public async Task GivenIClickTheFindButton()
         {
             await _findButton.ClickAsync();
             await _page.WaitForLoadStateAsync();

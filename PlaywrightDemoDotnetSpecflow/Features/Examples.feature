@@ -14,7 +14,7 @@ Scenario: Look Up a US ZIP Code
 	And I enter City and State
 	| City | State |
 	| Beverly Hills | CA |
-	And I click the the Find button
+	And I click the Find button
 	Then I sould get a page containing the selector BEVERLY HILLS CA 90210
 
 @regression
