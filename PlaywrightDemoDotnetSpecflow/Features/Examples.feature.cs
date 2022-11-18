@@ -134,7 +134,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Beverly Hills",
                             "CA"});
 #line 14
- testRunner.And("I enter City and State", ((string)(null)), table1, "And ");
+ testRunner.When("I enter City and State", ((string)(null)), table1, "When ");
 #line hidden
 #line 17
  testRunner.And("I click the Find button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

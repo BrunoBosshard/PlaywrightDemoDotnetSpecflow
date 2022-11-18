@@ -11,7 +11,7 @@ Scenario: Get Started with Playwright
 @regression
 Scenario: Look Up a US ZIP Code
 	Given I navigate to the USPS Look Up a ZIP Code page
-	And I enter City and State
+	When I enter City and State
 	| City | State |
 	| Beverly Hills | CA |
 	And I click the Find button

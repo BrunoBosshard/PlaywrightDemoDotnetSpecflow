@@ -28,16 +28,16 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
             await _page.GotoAsync("https://tools.usps.com/zip-code-lookup.htm?bycitystate");
         }
 
-        [Given(@"I enter City and State")]
-        public async Task GivenIEnterCityAndState(Table table)
+        [When(@"I enter City and State")]
+        public async Task WhenIEnterCityAndState(Table table)
         {
             dynamic data = table.CreateDynamicInstance();
             await _cityInput.FillAsync((string)data.City);
             await _stateSelect.SelectOptionAsync((string)data.State);
         }
 
-        [Given(@"I click the Find button")]
-        public async Task GivenIClickTheFindButton()
+        [When(@"I click the Find button")]
+        public async Task WhenIClickTheFindButton()
         {
             await _findButton.ClickAsync();
             await _page.WaitForLoadStateAsync();
