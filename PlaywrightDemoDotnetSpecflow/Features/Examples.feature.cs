@@ -178,7 +178,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 22
- testRunner.Given("I navigate to the Bing search home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the Google search home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 23
  testRunner.When(string.Format("I enter iata:\"{0}\" as search term", airportCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

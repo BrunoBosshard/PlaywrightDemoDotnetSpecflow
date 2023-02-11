@@ -16,14 +16,14 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         {
             _driver = driver;
             _page = _driver.Page;
-            _searchInput = _page.Locator("input[name=\"q\"]");
-            _searchButton = _page.Locator("id=search_icon");
+            _searchInput = _page.Locator("input[name='q']");
+            _searchButton = _page.Locator("(//input[@name='btnK'])[2]");
         }
 
-        [Given(@"I navigate to the Bing search home page")]
-        public async Task GivenIAmOnTheBingSearchHomePage()
+        [Given(@"I navigate to the Google search home page")]
+        public async Task GivenIAmOnTheGoogleSearchHomePage()
         {
-            await _page.GotoAsync("https://www.bing.com");
+            await _page.GotoAsync("https://www.google.com");
         }
 
         [When(@"I enter iata:""([^""]*)"" as search term")]
