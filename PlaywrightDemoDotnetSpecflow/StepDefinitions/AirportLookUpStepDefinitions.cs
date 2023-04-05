@@ -23,7 +23,17 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         [Given(@"I navigate to the Google search home page")]
         public async Task GivenIAmOnTheGoogleSearchHomePage()
         {
-            await _page.GotoAsync("https://www.google.com");
+            int intCounter = 0;
+            while (intCounter < 10) {
+                await _page.GotoAsync("https://www.google.com");
+                await _page.WaitForLoadStateAsync();
+                if (await _searchInput.IsVisibleAsync()) {
+                    break;
+                } else {
+                    Thread.Sleep(3000);
+                    intCounter++;
+                }
+            }
         }
 
         [When(@"I enter iata:""([^""]*)"" as search term")]
