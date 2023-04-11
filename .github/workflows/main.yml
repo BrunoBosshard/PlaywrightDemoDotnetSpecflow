@@ -7,7 +7,7 @@ on:
     - cron: '5 3/4 * * *'
 jobs:
   playwright-demo-dotnet:
-    name: Playwright version 1.25
+    name: Playwright
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -28,19 +28,19 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 7.0.x
       - name: Build
         run: dotnet build
       - name: Playwright install
-        run: pwsh ./bin/Debug/net6.0/playwright.ps1 install --with-deps
+        run: pwsh ./bin/Debug/net7.0/playwright.ps1 install --with-deps
       - name: Run tests
-        run: dotnet test --logger trx --logger html --results-directory "TestResults-6.0.x"
+        run: dotnet test --logger trx --logger html --results-directory "TestResults-7.0.x"
       - name: Create report folder
         run: mkdir -m777 ../public
       - name: Copy test execution videos to report
-        run: cp -r ./bin/Debug/net6.0/videos ../public
+        run: cp -r ./bin/Debug/net7.0/videos ../public
       - name: Copy html report file
-        run: cp TestResults-6.0.x/TestResult*.html ../public/index.html
+        run: cp TestResults-7.0.x/TestResult*.html ../public/index.html
       # report includes videos
       - name: Upload artifacts report
         uses: actions/upload-artifact@v3
