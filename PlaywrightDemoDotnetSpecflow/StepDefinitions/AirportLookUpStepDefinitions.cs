@@ -16,16 +16,16 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         {
             _driver = driver;
             _page = _driver.Page;
-            _searchInput = _page.Locator("input[name='q']");
-            _searchButton = _page.Locator("(//input[@name='btnK'])[2]");
+            _searchInput = _page.Locator("input[placeholder='Search the web without being tracked']");
+            _searchButton = _page.Locator("button[aria-label='Search']");
         }
 
-        [Given(@"I navigate to the Google search home page")]
-        public async Task GivenIAmOnTheGoogleSearchHomePage()
+        [Given(@"I navigate to the DuckDuckGo search home page")]
+        public async Task GivenIAmOnTheDuckDuckGoSearchHomePage()
         {
             int intCounter = 0;
             while (intCounter < 10) {
-                await _page.GotoAsync("https://www.google.com");
+                await _page.GotoAsync("https://duckduckgo.com/");
                 await _page.WaitForLoadStateAsync();
                 if (await _searchInput.IsVisibleAsync()) {
                     break;

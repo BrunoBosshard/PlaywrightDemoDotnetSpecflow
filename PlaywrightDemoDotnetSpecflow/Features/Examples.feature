@@ -19,7 +19,7 @@ Scenario: Look Up a US ZIP Code
 
 @regression
 Scenario Outline: Airport Code Look Up
-	Given I navigate to the Google search home page
+	Given I navigate to the DuckDuckGo search home page
 	When I enter iata:"<airportCode>" as search term
 	And I click on the search the web button
 	Then I should get a page cotaining the term "<airportName>"
