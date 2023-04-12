@@ -16,8 +16,8 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         {
             _driver = driver;
             _page = _driver.Page;
-            _searchInput = _page.Locator("input[placeholder='Search the web without being tracked']");
-            _searchButton = _page.Locator("button[aria-label='Search']");
+            _searchInput = _page.Locator("input[placeholder=\"Search the web without being tracked\"]");
+            _searchButton = _page.Locator("button[aria-label=\"Search\"]");
         }
 
         [Given(@"I navigate to the DuckDuckGo search home page")]
