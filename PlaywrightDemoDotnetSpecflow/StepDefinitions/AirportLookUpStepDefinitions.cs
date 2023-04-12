@@ -39,15 +39,13 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         [When(@"I enter iata:""([^""]*)"" as search term")]
         public async Task WhenIEnterIataAsSearchTerm(string airportCode)
         {
-            await _page.Keyboard.TypeAsync("iata:" + airportCode);
-            // await _searchInput.FillAsync("iata:" + airportCode);
+            await _searchInput.FillAsync("iata:" + airportCode);
         }
 
         [When(@"I click on the search the web button")]
         public async Task WhenIClickOnTheSearchTheWebButton()
         {
-            // await _searchButton.ClickAsync();
-            await _page.Keyboard.PressAsync("Enter");;
+            await _searchButton.ClickAsync();
             await _page.WaitForLoadStateAsync();
         }
 
