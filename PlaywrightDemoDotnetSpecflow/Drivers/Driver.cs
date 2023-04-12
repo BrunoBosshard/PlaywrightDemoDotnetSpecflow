@@ -18,7 +18,7 @@
             // Browser
             _browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = true
+                Headless = false
             });
             // Page
             return await _browser.NewPageAsync(new BrowserNewPageOptions
