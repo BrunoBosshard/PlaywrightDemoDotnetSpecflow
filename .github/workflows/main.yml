@@ -7,7 +7,7 @@ on:
     - cron: '5 3/4 * * *'
 jobs:
   playwright-demo-dotnet:
-    name: Playwright
+    name: Playwright version 1.25
     runs-on: ubuntu-latest
     defaults:
       run:
