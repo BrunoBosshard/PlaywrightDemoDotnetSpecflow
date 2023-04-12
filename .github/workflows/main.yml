@@ -7,7 +7,7 @@ on:
     - cron: '5 3/4 * * *'
 jobs:
   playwright-demo-dotnet:
-    name: Playwright version 1.25
+    name: Playwright
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -28,7 +28,7 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: '6.0.x'
       - name: Build
         run: dotnet build
       - name: Playwright install
