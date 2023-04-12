@@ -46,7 +46,7 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         public async Task WhenIClickOnTheSearchTheWebButton()
         {
             // await _searchButton.ClickAsync();
-            await _page.keyboard.press("Enter");
+            await _page.keyboard().press("Enter");
             await _page.WaitForLoadStateAsync();
         }
 
