@@ -43,7 +43,7 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
             await _page.WaitForLoadStateAsync();
         }
 
-        [Then(@"I sould get a page containing the selector BEVERLY HILLS CA 90210")]
+        [Then(@"I should get a page containing the selector BEVERLY HILLS CA 90210")]
         public async Task ThenISouldGetAPageContainingBEVERLYHILLSCA()
         {
             // This is also an assertion

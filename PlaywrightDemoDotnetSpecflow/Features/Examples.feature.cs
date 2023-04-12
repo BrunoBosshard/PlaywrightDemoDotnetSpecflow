@@ -140,7 +140,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I click the Find button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
- testRunner.Then("I sould get a page containing the selector BEVERLY HILLS CA 90210", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should get a page containing the selector BEVERLY HILLS CA 90210", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -178,7 +178,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 22
- testRunner.Given("I navigate to the Google search home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate to the DuckDuckGo search home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 23
  testRunner.When(string.Format("I enter iata:\"{0}\" as search term", airportCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
