@@ -16,7 +16,7 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         {
             _driver = driver;
             _page = _driver.Page;
-            _searchInput = _page.Locator("input[@id=\"searchbox_input\"]");
+            _searchInput = _page.Locator("input[id=\"searchbox_input\"]");
             _searchButton = _page.Locator("button[aria-label=\"Search\"]");
         }
 
