@@ -16,7 +16,7 @@
             // Playwright
             var playwright = await Playwright.CreateAsync();
             // Browser
-            _browser = await playwright.firefox.LaunchAsync(new BrowserTypeLaunchOptions
+            _browser = await playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
             {
                 Headless = false
             });
