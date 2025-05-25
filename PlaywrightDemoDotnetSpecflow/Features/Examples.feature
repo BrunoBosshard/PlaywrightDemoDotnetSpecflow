@@ -15,7 +15,7 @@ Scenario: Look Up a US ZIP Code
 	| City | State |
 	| Beverly Hills | CA |
 	And I click the Find button
-	Then I should get a page containing the selector BEVERLY HILLS CA 90210
+	Then I should get a page containing the text BEVERLY HILLS CA 90210
 
 @regression
 Scenario Outline: Airport Code Look Up

@@ -140,7 +140,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I click the Find button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
- testRunner.Then("I should get a page containing the selector BEVERLY HILLS CA 90210", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should get a page containing the text BEVERLY HILLS CA 90210", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

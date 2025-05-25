@@ -1,4 +1,5 @@
 
+using FluentAssertions;
 using PlaywrightDemoDotnetSpecflow.Drivers;
 using TechTalk.SpecFlow.Assist;
 
@@ -43,11 +44,12 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
             await _page.WaitForLoadStateAsync();
         }
 
-        [Then(@"I should get a page containing the selector BEVERLY HILLS CA 90210")]
+        [Then(@"I should get a page containing the text BEVERLY HILLS CA 90210")]
         public async Task ThenISouldGetAPageContainingBEVERLYHILLSCA()
         {
-            // This is also an assertion
-            await _page.IsEnabledAsync("text=BEVERLY HILLS CA 90210", new PageIsEnabledOptions { Timeout = 3000 });
+            await _page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
+            var html = await _page.ContentAsync();
+            html.Should().Contain("BEVERLY HILLS CA 90210");
         }
     }
 }
