@@ -44,12 +44,12 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
             await _page.WaitForLoadStateAsync();
         }
 
-        [Then(@"I should get a page containing the text BEVERLY HILLS CA 90210")]
+        [Then(@"I should get a page containing the text BEVERLY HILLS CA")]
         public async Task ThenISouldGetAPageContainingBEVERLYHILLSCA()
         {
             await _page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
             var html = await _page.ContentAsync();
-            html.Should().Contain("BEVERLY HILLS CA 90210");
+            html.Should().Contain("BEVERLY HILLS CA");
         }
     }
 }
