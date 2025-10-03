@@ -49,8 +49,8 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
             await _page.WaitForLoadStateAsync();
         }
 
-        [Then(@"I should get a page cotaining the term ""([^""]*)""")]
-        public async Task ThenIShouldGetAPageCotainingTheTerm(string airportName)
+        [Then(@"I should get a page containing the term ""([^""]*)""")]
+        public async Task ThenIShouldGetAPageContainingTheTerm(string airportName)
         {
             string bodyText = await _page.InnerTextAsync("body");
             bodyText.ToLower().Should().Contain(airportName.ToLower());
