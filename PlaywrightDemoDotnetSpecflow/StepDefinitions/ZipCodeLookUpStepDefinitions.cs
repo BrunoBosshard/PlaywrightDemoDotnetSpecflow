@@ -48,8 +48,8 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         public async Task ThenISouldGetAPageContainingBEVERLYHILLSCA()
         {
             await _page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
-            var html = await _page.ContentAsync();
-            html.Should().Contain("BEVERLY HILLS CA");
+            var bodyText = await _page.InnerTextAsync("body");
+            bodyText.ToLower().Should().Contain("BEVERLY HILLS CA");
         }
     }
 }
