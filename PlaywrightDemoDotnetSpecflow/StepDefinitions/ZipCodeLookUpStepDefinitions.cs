@@ -49,7 +49,7 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         {
             await _page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
             var bodyText = await _page.InnerTextAsync("body");
-            bodyText.ToLower().Should().Contain("BEVERLY HILLS CA");
+            bodyText.Should().Contain("BEVERLY HILLS CA");
         }
     }
 }
