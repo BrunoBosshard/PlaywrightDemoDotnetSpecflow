@@ -13,7 +13,7 @@ Scenario: Look Up a US ZIP Code
 	Given I navigate to the USPS Look Up a ZIP Code page
 	When I enter City and State
 	| City | State |
-	| Beverly Hills | CA |
+	| Beverly Hills | CA - California |
 	And I click the Find button
 	Then I should get a page containing the text BEVERLY HILLS CA
 
