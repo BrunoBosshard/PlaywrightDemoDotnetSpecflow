@@ -187,7 +187,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I click on the search the web button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
- testRunner.Then(string.Format("I should get a page cotaining the term \"{0}\"", airportName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I should get a page containing the term \"{0}\"", airportName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
