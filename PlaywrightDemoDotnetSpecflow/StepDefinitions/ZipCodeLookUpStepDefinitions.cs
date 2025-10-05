@@ -47,10 +47,9 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         [Then(@"I should get a page containing the text BEVERLY HILLS CA")]
         public async Task ThenISouldGetAPageContainingBEVERLYHILLSCA()
         {
-            await _page.WaitForTimeoutAsync(5000);
             await _page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
-            string content = await _page.ContentAsync();
-            content.Should().Contain("BEVERLY HILLS CA");
+            var html = await _page.ContentAsync();
+            html.Should().Contain("BEVERLY HILLS CA");
         }
     }
 }
