@@ -24,12 +24,16 @@ namespace PlaywrightDemoDotnetSpecflow.StepDefinitions
         public async Task GivenIAmOnTheDuckDuckGoSearchHomePage()
         {
             int intCounter = 0;
-            while (intCounter < 10) {
+            while (intCounter < 10)
+            {
                 await _page.GotoAsync("https://duckduckgo.com/");
                 await _page.WaitForLoadStateAsync();
-                if (await _searchInput.IsVisibleAsync()) {
+                if (await _searchInput.IsVisibleAsync())
+                {
                     break;
-                } else {
+                }
+                else
+                {
                     Thread.Sleep(3000);
                     intCounter++;
                 }

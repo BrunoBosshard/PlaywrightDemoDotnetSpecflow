@@ -132,7 +132,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "State"});
                 table1.AddRow(new string[] {
                             "Beverly Hills",
-                            "CA"});
+                            "CA - California"});
 #line 14
  testRunner.When("I enter City and State", ((string)(null)), table1, "When ");
 #line hidden

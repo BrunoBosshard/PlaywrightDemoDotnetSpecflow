@@ -16,7 +16,7 @@
             // Playwright
             var playwright = await Playwright.CreateAsync();
             // Browser
-            _browser = await playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
+            _browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
                 Headless = false
             });
@@ -25,7 +25,7 @@
             {
                 RecordVideoDir = "videos/",
                 RecordVideoSize = new RecordVideoSize() { Width = 1024, Height = 768 },
-                UserAgent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+                UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
             });
         }
     }

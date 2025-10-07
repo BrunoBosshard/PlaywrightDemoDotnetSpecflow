@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   schedule:
     # run at minute 5 past every 4th hour from 3 through 23
-    - cron: '5 3/4 * * *'
+    - cron: "5 3/4 * * *"
 jobs:
   playwright-demo-dotnet:
-    name: Playwright version 1.47
+    name: Playwright version 1.55
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -24,26 +24,26 @@ jobs:
           retain_days: 7
           keep_minimum_runs: 10
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: '7.0.x'
+          dotnet-version: "8.0.x"
       - name: Build
         run: dotnet build
       - name: Playwright install
-        run: pwsh ./bin/Debug/net7.0/playwright.ps1 install --with-deps
+        run: pwsh ./bin/Debug/net8.0/playwright.ps1 install --with-deps
       - name: Run tests with Xvfb (headed)
         run: |
           export DISPLAY=:99
           sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
-          dotnet test --logger trx --logger html --results-directory "TestResults-7.0.x"
+          dotnet test --logger trx --logger html --results-directory "TestResults-8.0.x"
       - name: Create report folder
         run: mkdir -m777 ../public
       - name: Copy test execution videos to report
-        run: cp -r ./bin/Debug/net7.0/videos ../public
+        run: cp -r ./bin/Debug/net8.0/videos ../public
       - name: Copy html report file
-        run: cp TestResults-7.0.x/TestResult*.html ../public/index.html
+        run: cp TestResults-8.0.x/TestResult*.html ../public/index.html
       # report includes videos
       - name: Upload artifacts report
         uses: actions/upload-artifact@v4
@@ -52,7 +52,7 @@ jobs:
           path: public
           if-no-files-found: ignore
       - name: Deploy playwright report
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: public
