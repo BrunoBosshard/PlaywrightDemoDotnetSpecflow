@@ -5,40 +5,40 @@
       <div class="block"><span>Total tests</span><div class="total-tests">7</div><br></div>
       <div class="block"><span>Passed  : </span><span class="passedTests">7</span><br><span>Failed  : </span><span class="failedTests">0</span><br><span>Skipped : </span><span class="skippedTests">0</span><br></div>
       <div class="block"><span>Pass percentage</span><div class="pass-percentage">100 %</div><br></div>
-      <div class="block"><span>Run duration</span><div class="test-run-time">11s 728ms</div><br></div><br></div>
-    <h2>All Results</h2><details><summary>/home/runner/work/PlaywrightDemoDotnetSpecflow/PlaywrightDemoDotnetSpecflow/PlaywrightDemoDotnetSpecflow/bin/Debug/net8.0/PlaywrightDemoDotnetSpecflow.dll</summary><div class="inner-row" Id="-1507599047">
+      <div class="block"><span>Run duration</span><div class="test-run-time">11s 121ms</div><br></div><br></div>
+    <h2>All Results</h2><details><summary>/home/runner/work/PlaywrightDemoDotnetSpecflow/PlaywrightDemoDotnetSpecflow/PlaywrightDemoDotnetSpecflow/bin/Debug/net8.0/PlaywrightDemoDotnetSpecflow.dll</summary><div class="inner-row" Id="1994122211">
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("ATL","Atlanta",null)​</span><div class="duration"><span>791ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("ATL","Atlanta",null)​</span><div class="duration"><span>880ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("DFW","Dallas",null)​</span><div class="duration"><span>431ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("DFW","Dallas",null)​</span><div class="duration"><span>446ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("DEN","Denver",null)​</span><div class="duration"><span>411ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("DEN","Denver",null)​</span><div class="duration"><span>413ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("LAX","Los Angeles",null)​</span><div class="duration"><span>449ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("LAX","Los Angeles",null)​</span><div class="duration"><span>445ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("SFO","San Francisco",null)​</span><div class="duration"><span>403ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("SFO","San Francisco",null)​</span><div class="duration"><span>441ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> GetStartedWithPlaywright​</span><div class="duration"><span>1s 228ms</span><br></div>
+          <div><span class="pass">✔</span><span> GetStartedWithPlaywright​</span><div class="duration"><span>1s 120ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> LookUpAUSZIPCode​</span><div class="duration"><span>3s 517ms</span><br></div>
+          <div><span class="pass">✔</span><span> LookUpAUSZIPCode​</span><div class="duration"><span>3s 300ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
@@ -47,7 +47,7 @@
     <div>
       <h2>Error and Warning messages</h2><span>Given I navigate to the DuckDuckGo search home page
 Using mock search page for CI environment
--&gt; done: AirportLookUpStepDefinitions.GivenIAmOnTheDuckDuckGoSearchHomePage() (0.6s)
+-&gt; done: AirportLookUpStepDefinitions.GivenIAmOnTheDuckDuckGoSearchHomePage() (0.7s)
 When I enter iata:"ATL" as search term
 -&gt; done: AirportLookUpStepDefinitions.WhenIEnterIataAsSearchTerm("ATL") (0.0s)
 And I click on the search the web button
@@ -98,7 +98,7 @@ Then I should get a page containing the term "San Francisco"
 </span><br><span>Given I navigate to the Playwright home page
 -&gt; done: GetStartedWithPlaywrightStepDefinitions.GivenINavigateToThePlaywrightHomePage() (0.8s)
 When I click on the GET STARTED button
--&gt; done: GetStartedWithPlaywrightStepDefinitions.WhenIClickOnTheGETSTARTEDButton() (0.4s)
+-&gt; done: GetStartedWithPlaywrightStepDefinitions.WhenIClickOnTheGETSTARTEDButton() (0.3s)
 Then I expect the URL to contain intro
 -&gt; done: GetStartedWithPlaywrightStepDefinitions.ThenIExpectTheURLToContainIntro() (0.1s)
 </span><br><span>Given I navigate to the USPS Look Up a ZIP Code page
@@ -107,7 +107,7 @@ When I enter City and State
   --- table step argument ---
   | City          | State           |
   | Beverly Hills | CA - California |
--&gt; done: ZipCodeLookUpStepDefinitions.WhenIEnterCityAndState(&lt;table&gt;) (0.5s)
+-&gt; done: ZipCodeLookUpStepDefinitions.WhenIEnterCityAndState(&lt;table&gt;) (0.2s)
 And I click the Find button
 -&gt; done: ZipCodeLookUpStepDefinitions.WhenIClickTheFindButton() (0.2s)
 Then I should get a page containing the text BEVERLY HILLS CA
