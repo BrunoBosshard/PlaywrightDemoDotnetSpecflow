@@ -5,40 +5,40 @@
       <div class="block"><span>Total tests</span><div class="total-tests">7</div><br></div>
       <div class="block"><span>Passed  : </span><span class="passedTests">7</span><br><span>Failed  : </span><span class="failedTests">0</span><br><span>Skipped : </span><span class="skippedTests">0</span><br></div>
       <div class="block"><span>Pass percentage</span><div class="pass-percentage">100 %</div><br></div>
-      <div class="block"><span>Run duration</span><div class="test-run-time">7s 224ms</div><br></div><br></div>
-    <h2>All Results</h2><details><summary>/home/runner/work/PlaywrightDemoDotnetSpecflow/PlaywrightDemoDotnetSpecflow/PlaywrightDemoDotnetSpecflow/bin/Debug/net8.0/PlaywrightDemoDotnetSpecflow.dll</summary><div class="inner-row" Id="-916016660">
+      <div class="block"><span>Run duration</span><div class="test-run-time">7s 160ms</div><br></div><br></div>
+    <h2>All Results</h2><details><summary>/home/runner/work/PlaywrightDemoDotnetSpecflow/PlaywrightDemoDotnetSpecflow/PlaywrightDemoDotnetSpecflow/bin/Debug/net8.0/PlaywrightDemoDotnetSpecflow.dll</summary><div class="inner-row" Id="-366263380">
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("ATL","Atlanta",null)​</span><div class="duration"><span>601ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("ATL","Atlanta",null)​</span><div class="duration"><span>628ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("DFW","Dallas",null)​</span><div class="duration"><span>431ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("DFW","Dallas",null)​</span><div class="duration"><span>424ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("DEN","Denver",null)​</span><div class="duration"><span>444ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("DEN","Denver",null)​</span><div class="duration"><span>439ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("LAX","Los Angeles",null)​</span><div class="duration"><span>479ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("LAX","Los Angeles",null)​</span><div class="duration"><span>473ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> AirportCodeLookUp("SFO","San Francisco",null)​</span><div class="duration"><span>424ms</span><br></div>
+          <div><span class="pass">✔</span><span> AirportCodeLookUp("SFO","San Francisco",null)​</span><div class="duration"><span>456ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> GetStartedWithPlaywright​</span><div class="duration"><span>982ms</span><br></div>
+          <div><span class="pass">✔</span><span> GetStartedWithPlaywright​</span><div class="duration"><span>947ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
         <div class="leaf-division">
-          <div><span class="pass">✔</span><span> LookUpAUSZIPCode​</span><div class="duration"><span>3s 127ms</span><br></div>
+          <div><span class="pass">✔</span><span> LookUpAUSZIPCode​</span><div class="duration"><span>3s 74ms</span><br></div>
           </div>
           <div class="error-info"></div>
         </div>
@@ -96,20 +96,20 @@ Mock search completed - results page loaded
 Then I should get a page containing the term "San Francisco"
 -&gt; done: AirportLookUpStepDefinitions.ThenIShouldGetAPageContainingTheTerm("San Francisco") (0.0s)
 </span><br><span>Given I navigate to the Playwright home page
--&gt; done: GetStartedWithPlaywrightStepDefinitions.GivenINavigateToThePlaywrightHomePage() (0.8s)
+-&gt; done: GetStartedWithPlaywrightStepDefinitions.GivenINavigateToThePlaywrightHomePage() (0.6s)
 When I click on the GET STARTED button
 -&gt; done: GetStartedWithPlaywrightStepDefinitions.WhenIClickOnTheGETSTARTEDButton() (0.2s)
 Then I expect the URL to contain intro
--&gt; done: GetStartedWithPlaywrightStepDefinitions.ThenIExpectTheURLToContainIntro() (0.0s)
+-&gt; done: GetStartedWithPlaywrightStepDefinitions.ThenIExpectTheURLToContainIntro() (0.1s)
 </span><br><span>Given I navigate to the USPS Look Up a ZIP Code page
--&gt; done: ZipCodeLookUpStepDefinitions.GivenINavigateToTheUSPSLookUpAZIPCodePage() (2.5s)
+-&gt; done: ZipCodeLookUpStepDefinitions.GivenINavigateToTheUSPSLookUpAZIPCodePage() (2.3s)
 When I enter City and State
   --- table step argument ---
   | City          | State           |
   | Beverly Hills | CA - California |
--&gt; done: ZipCodeLookUpStepDefinitions.WhenIEnterCityAndState(&lt;table&gt;) (0.3s)
+-&gt; done: ZipCodeLookUpStepDefinitions.WhenIEnterCityAndState(&lt;table&gt;) (0.5s)
 And I click the Find button
--&gt; done: ZipCodeLookUpStepDefinitions.WhenIClickTheFindButton() (0.3s)
+-&gt; done: ZipCodeLookUpStepDefinitions.WhenIClickTheFindButton() (0.2s)
 Then I should get a page containing the text BEVERLY HILLS CA
 -&gt; done: ZipCodeLookUpStepDefinitions.ThenISouldGetAPageContainingBEVERLYHILLSCA() (0.0s)
 </span><br></div>
