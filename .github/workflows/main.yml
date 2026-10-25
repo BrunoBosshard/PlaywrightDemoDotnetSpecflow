@@ -7,8 +7,11 @@ on:
     - cron: "5 3/4 * * *"
 jobs:
   playwright-demo-dotnet:
-    name: Playwright version 1.55
+    name: Playwright version 1.64.1
     runs-on: ubuntu-latest
+    concurrency: 
+      group: playwright-tests-${{ github.ref }}
+      cancel-in-progress: true
     defaults:
       run:
         working-directory: ./PlaywrightDemoDotnetSpecflow
@@ -28,7 +31,7 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "10.0.x"
       - name: Build
         run: dotnet build
       - name: Install Playwright
@@ -43,17 +46,17 @@ jobs:
           export DISPLAY=:99
           sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
           echo "Starting test execution with CI environment variables..."
-          dotnet test --logger trx --logger html --results-directory "TestResults-8.0.x"
+          dotnet test --logger trx --logger html --results-directory "TestResults-10.0.x"
           echo "Test execution completed. Checking for generated artifacts..."
-          ls -la TestResults-8.0.x/ || echo "No TestResults directory found"
+          ls -la TestResults-10.0.x/ || echo "No TestResults directory found"
       - name: Create report folder
         run: |
           mkdir -p ../public
           chmod 777 ../public
       - name: Copy test execution videos to report
         run: |
-          if [ -d "./bin/Debug/net8.0/videos" ]; then
-            cp -r ./bin/Debug/net8.0/videos ../public
+          if [ -d "./bin/Debug/net10.0/videos" ]; then
+            cp -r ./bin/Debug/net10.0/videos ../public
             echo "Videos copied successfully"
           else
             echo "No videos directory found (expected in CI mode with mock search)"
@@ -62,8 +65,8 @@ jobs:
           fi
       - name: Copy html report file
         run: |
-          if ls TestResults-8.0.x/TestResult*.html 1> /dev/null 2>&1; then
-            cp TestResults-8.0.x/TestResult*.html ../public/index.html
+          if ls TestResults-10.0.x/TestResult*.html 1> /dev/null 2>&1; then
+            cp TestResults-10.0.x/TestResult*.html ../public/index.html
             echo "HTML report copied successfully"
           else
             echo "No HTML report found, creating a basic report"
@@ -88,3 +91,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: public
           destination_dir: docs
+          force_orphan: false
+          enable_jekyll: false
